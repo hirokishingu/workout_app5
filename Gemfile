@@ -45,6 +45,11 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+group :development do
+  gem 'guard', '~>2.14.0'
+  gem 'guard-rspec', '~>4.7.2'
+end
+
 group :test do
   gem 'capybara', '2.7.1'
 end
