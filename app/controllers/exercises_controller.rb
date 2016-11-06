@@ -8,17 +8,17 @@ class ExercisesController < ApplicationController
    end
    
    def new
-       @exercise = current_user.exercises.new
+       @exercise = current_user.exercise.new
    end
    
    def create
-      @exercise = current_user.exercises.new(exercise_params)
+      @exercise = current_user.exercise.new(exercise_params)
       
-      if @exercise.saved
+      if @exercise.save
          flash[:notice] = "Exercise has been created"
          redirect_to [current_user,@exercise]
       else
-         flash[:alert] = "Exercise has not been created"
+         flash.now[:alert] = "Exercise has not been created"
          render :new
       end
    end
