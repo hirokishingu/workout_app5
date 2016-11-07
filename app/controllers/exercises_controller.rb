@@ -14,7 +14,7 @@ class ExercisesController < ApplicationController
    end
    
    def create
-      @exercise = current_user.exercisesf.new(exercise_params)
+      @exercise = current_user.exercises.new(exercise_params)
       
       if @exercise.save
          flash[:notice] = "Exercise has been created"
