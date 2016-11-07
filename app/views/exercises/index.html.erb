@@ -49,7 +49,7 @@
     
     <div class="col-md-3">
       <div class="btn-unfollow">
-        <%= link_to "Unfollow", friendship_path(current_user.current_friendship(frined)),
+        <%= link_to "Unfollow", friendship_path(current_user.current_friendship(friend)),
             method: :delete, data: { confirm: "Are you sure?" },
             class: "btn btn-success link" %>
       </div>
