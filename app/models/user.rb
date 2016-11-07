@@ -45,7 +45,7 @@ class User < ApplicationRecord
         
         def create_chatroom
             hyphenated_username = self.full_name.split.join('-')
-            Room.create(name: hyphenated_user, user_id: self.id)
+            Room.create(name: hyphenated_username, user_id: self.id)
         end
         
 end
