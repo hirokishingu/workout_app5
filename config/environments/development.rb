@@ -54,4 +54,6 @@ Rails.application.configure do
   
   config.action_cable.allowed_request_origins = ['https://workout-app-singuh.c9users.io']
   
+  config.action_cable.disable_request_forgery_protection = true
+  
 end
